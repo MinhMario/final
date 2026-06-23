@@ -141,8 +141,9 @@ class BookingManager:
         else:
             print('Lựa chọn không hợp lệ')
             return
+manager=BookingManager()
 while True:
-    manager=BookingManager()
+
     choice=input('Nhập lựa chọn của bạn').strip()
     if choice=='1':
         manager.show_all()
