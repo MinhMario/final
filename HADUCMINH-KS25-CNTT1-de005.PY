@@ -77,19 +77,19 @@ class BookingManager:
         if not room_number:
             print('Số phòng không được để trống')
             return
-        room_price=input('Nhập giá phòng').strip()
+        room_price=float(input('Nhập giá phòng').strip())
         if not self.check_float(room_price):
            print('Giá phòng một đêm phải lớn hơn hoặc bằng 0') 
            return
-        nights=input('Nhập số đêm thuê').strip()
+        nights=int(input('Nhập số đêm thuê').strip())
         if not self.check_nights(nights):
             print('Số đêm thuê phải là số nguyên từ 1 đến 365')
             return
-        service_fee=input('Nhập phụ phí dịch vụ').strip()
+        service_fee=float(input('Nhập phụ phí dịch vụ').strip())
         if service_fee<0:
             print('Phụ phí dịch vụ phải lớn hơn hoặc bằng 0')
             return
-        discount=input('Nhập giảm giá').strip()
+        discount=float(input('Nhập giảm giá').strip())
         if discount<0:
             print('Giảm giá phải lớn hơn hoặc bằng 0')
             return
